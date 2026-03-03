@@ -1,5 +1,8 @@
 name: semantic-pr
 
+# pull_request_target is required for this action to read PR titles from fork PRs.
+# IMPORTANT: Never add an actions/checkout step to this workflow. Checking out fork
+# code under pull_request_target grants the fork's code access to repository secrets.
 on:
   pull_request_target:
     types: [opened, edited, synchronize]
