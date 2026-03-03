@@ -1,0 +1,23 @@
+# Build output
+dist/
+*.d.ts
+*.js
+!jest.config.js
+
+# Yarn
+.yarn/cache
+.yarn/install-state.gz
+
+# Node
+node_modules/
+
+# Playwright
+/playwright/.auth/
+playwright-report/
+test-results/
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp

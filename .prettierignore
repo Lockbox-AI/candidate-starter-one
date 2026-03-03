@@ -1,0 +1,11 @@
+# Build output
+dist/
+*.d.ts
+*.js
+!jest.config.js
+
+# Yarn
+.yarn/
+
+# Dependencies
+node_modules/
