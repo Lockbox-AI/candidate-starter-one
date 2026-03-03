@@ -1,6 +1,6 @@
 {
   "name": "candidate-starter-one",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "TypeScript RPA starter scaffold for interview candidates",
   "main": "dist/index.js",
   "license": "MIT",
