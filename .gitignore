@@ -1,6 +1,5 @@
 # Build output
 dist/
-*.d.ts
 *.js
 !jest.config.js
 
