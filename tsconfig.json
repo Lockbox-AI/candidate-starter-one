@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["es2022"],
-    "skipLibCheck": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
-    "declaration": false,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"],
-    "resolveJsonModule": true,
-    "isolatedModules": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "test"]
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["es2022"],
+        "skipLibCheck": true,
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "outDir": "dist",
+        "declaration": false,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "typeRoots": ["./node_modules/@types"],
+        "resolveJsonModule": true,
+        "isolatedModules": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "test"]
 }

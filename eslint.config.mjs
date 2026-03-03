@@ -28,53 +28,53 @@ const MIT_HEADER = `// Copyright 2025-2026 Lockbox AI, Inc.
 // SOFTWARE.`;
 
 const licenseHeaderPlugin = {
-  rules: {
-    'license-header': {
-      meta: {
-        type: 'problem',
-        fixable: 'code',
-        schema: [],
-        messages: {
-          missing: 'File must begin with the MIT license header.',
-        },
-      },
-      create(context) {
-        return {
-          Program() {
-            const src = context.sourceCode.getText();
-            if (!src.startsWith(MIT_HEADER)) {
-              context.report({
-                loc: { line: 1, column: 0 },
-                messageId: 'missing',
-                fix(fixer) {
-                  return fixer.insertTextBeforeRange([0, 0], MIT_HEADER + '\n\n');
+    rules: {
+        'license-header': {
+            meta: {
+                type: 'problem',
+                fixable: 'code',
+                schema: [],
+                messages: {
+                    missing: 'File must begin with the MIT license header.',
                 },
-              });
-            }
-          },
-        };
-      },
+            },
+            create(context) {
+                return {
+                    Program() {
+                        const src = context.sourceCode.getText();
+                        if (!src.startsWith(MIT_HEADER)) {
+                            context.report({
+                                loc: { line: 1, column: 0 },
+                                messageId: 'missing',
+                                fix(fixer) {
+                                    return fixer.insertTextBeforeRange([0, 0], MIT_HEADER + '\n\n');
+                                },
+                            });
+                        }
+                    },
+                };
+            },
+        },
     },
-  },
 };
 
 export default defineConfig(
-  js.configs.recommended,
-  tseslint.configs.recommended,
-  prettierConfig,
+    js.configs.recommended,
+    tseslint.configs.recommended,
+    prettierConfig,
 
-  globalIgnores(['node_modules/**', 'dist/**', '**/*.js', '**/*.d.ts']),
+    globalIgnores(['node_modules/**', 'dist/**', '**/*.js', '**/*.d.ts']),
 
-  {
-    files: ['**/*.ts'],
-    plugins: {
-      'local-rules': licenseHeaderPlugin,
+    {
+        files: ['**/*.ts'],
+        plugins: {
+            'local-rules': licenseHeaderPlugin,
+        },
+        rules: {
+            'local-rules/license-header': 'error',
+            '@typescript-eslint/no-explicit-any': 'warn',
+            '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+            'no-console': 'warn',
+        },
     },
-    rules: {
-      'local-rules/license-header': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'no-console': 'warn',
-    },
-  },
 );

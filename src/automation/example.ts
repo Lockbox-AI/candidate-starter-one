@@ -21,16 +21,16 @@
 import { chromium } from 'playwright';
 
 export async function run(): Promise<void> {
-  const browser = await chromium.launch({ headless: true });
+    const browser = await chromium.launch({ headless: true });
 
-  try {
-    const page = await browser.newPage();
+    try {
+        const page = await browser.newPage();
 
-    // TODO: replace with your target URL
-    await page.goto('https://example.com');
+        // TODO: replace with your target URL
+        await page.goto('https://example.com');
 
-    // TODO: implement your automation logic here
-  } finally {
-    await browser.close();
-  }
+        // TODO: implement your automation logic here
+    } finally {
+        await browser.close();
+    }
 }

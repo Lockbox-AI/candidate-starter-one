@@ -24,31 +24,31 @@ import { chromium } from 'playwright';
 import { run } from '../../src/automation/example';
 
 describe('run', () => {
-  let mockPage: { goto: jest.Mock };
-  let mockBrowser: { newPage: jest.Mock; close: jest.Mock };
+    let mockPage: { goto: jest.Mock };
+    let mockBrowser: { newPage: jest.Mock; close: jest.Mock };
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    mockPage = { goto: jest.fn().mockResolvedValue(null) };
-    mockBrowser = {
-      newPage: jest.fn().mockResolvedValue(mockPage),
-      close: jest.fn().mockResolvedValue(undefined),
-    };
-    (chromium.launch as jest.Mock).mockResolvedValue(mockBrowser);
-  });
+    beforeEach(() => {
+        jest.clearAllMocks();
+        mockPage = { goto: jest.fn().mockResolvedValue(null) };
+        mockBrowser = {
+            newPage: jest.fn().mockResolvedValue(mockPage),
+            close: jest.fn().mockResolvedValue(undefined),
+        };
+        (chromium.launch as jest.Mock).mockResolvedValue(mockBrowser);
+    });
 
-  it('launches chromium in headless mode', async () => {
-    await run();
-    expect(chromium.launch).toHaveBeenCalledWith({ headless: true });
-  });
+    it('launches chromium in headless mode', async () => {
+        await run();
+        expect(chromium.launch).toHaveBeenCalledWith({ headless: true });
+    });
 
-  it('opens a new page', async () => {
-    await run();
-    expect(mockBrowser.newPage).toHaveBeenCalled();
-  });
+    it('opens a new page', async () => {
+        await run();
+        expect(mockBrowser.newPage).toHaveBeenCalled();
+    });
 
-  it('closes the browser after automation completes', async () => {
-    await run();
-    expect(mockBrowser.close).toHaveBeenCalled();
-  });
+    it('closes the browser after automation completes', async () => {
+        await run();
+        expect(mockBrowser.close).toHaveBeenCalled();
+    });
 });

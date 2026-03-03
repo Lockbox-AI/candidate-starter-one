@@ -1,44 +1,44 @@
 {
-  "name": "candidate-starter-one",
-  "version": "1.0.0",
-  "description": "TypeScript RPA starter scaffold for interview candidates",
-  "main": "dist/index.js",
-  "license": "MIT",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Lockbox-AI/candidate-starter-one.git"
-  },
-  "homepage": "https://github.com/Lockbox-AI/candidate-starter-one#readme",
-  "bugs": {
-    "url": "https://github.com/Lockbox-AI/candidate-starter-one/issues"
-  },
-  "packageManager": "yarn@4.7.0",
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist",
-    "start": "node dist/index.js",
-    "dev": "tsx src/index.ts",
-    "test": "jest",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.0",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^22.0.0",
-    "eslint": "^10.0.0",
-    "eslint-config-prettier": "^10.0.0",
-    "jest": "^30.0.0",
-    "prettier": "^3.0.0",
-    "ts-jest": "^29.0.0",
-    "tsx": "^4.0.0",
-    "typescript": "~5.9.0",
-    "typescript-eslint": "^8.0.0"
-  },
-  "dependencies": {
-    "playwright": "^1.58.2"
-  }
+    "name": "candidate-starter-one",
+    "version": "1.0.0",
+    "description": "TypeScript RPA starter scaffold for interview candidates",
+    "main": "dist/index.js",
+    "license": "MIT",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Lockbox-AI/candidate-starter-one.git"
+    },
+    "homepage": "https://github.com/Lockbox-AI/candidate-starter-one#readme",
+    "bugs": {
+        "url": "https://github.com/Lockbox-AI/candidate-starter-one/issues"
+    },
+    "packageManager": "yarn@4.7.0",
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf dist",
+        "start": "node dist/index.js",
+        "dev": "tsx src/index.ts",
+        "test": "jest",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.0",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^22.0.0",
+        "eslint": "^10.0.0",
+        "eslint-config-prettier": "^10.0.0",
+        "jest": "^30.0.0",
+        "prettier": "^3.0.0",
+        "ts-jest": "^29.0.0",
+        "tsx": "^4.0.0",
+        "typescript": "~5.9.0",
+        "typescript-eslint": "^8.0.0"
+    },
+    "dependencies": {
+        "playwright": "^1.58.2"
+    }
 }
